@@ -1,0 +1,33 @@
+﻿<Window x:Class="UI_elementsWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI_elementsWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="320" VerticalAlignment="Top" Width="525">
+            <TabItem Header="Homework">
+                <Grid Background="#FFE5E5E5">
+                    <TextBlock Text="UI Tasks" FontSize="18px" Foreground="Blue"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Notes, Lists">
+                <Grid Background="#FFE5E5E5">
+                    <ListBox>
+                        <ListBoxItem Content="Stamps" Padding="10,2,2,2" />
+                        <ListBoxItem Content="Milk" Padding="10,2,2,2" />
+                        <ListBoxItem Content="Monitors" Padding="10,2,2,2" />
+                    </ListBox>
+                    <Button Height="20px" Width="100px"  Content="OK" Click="btnNote_Clicking" HorizontalAlignment="Left" Margin="5px" Background="Green" Foreground="White" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Markup Extension Button">
+                <Grid Background="BurlyWood">
+                    <Button Width="{x:Static SystemParameters.IconWidth}" Height="{x:Static SystemParameters.IconHeight}" Content="{Binding Path=Height, RelativeSource={RelativeSource Self}}" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
